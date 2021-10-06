@@ -5,7 +5,7 @@
         "php": ">=7.0"
         
     },
-    "license": "proprietary",
+
     "autoload": {
         "psr-4": {
             "Toku\\CaaS\\": "src/"
