@@ -5,7 +5,19 @@
         "php": ">=7.0"
         
     },
-
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Chung Chee Foong",
+            "email": "chung.cheefoong@toku.co",
+            "homepage": "https://toku.co/",
+            "role": "Solution Architect"
+        }
+    ],
+    "support": {
+        "email": "support@toku.co",
+        "docs":"https://apidocs.toku.co/"
+    },
     "autoload": {
         "psr-4": {
             "Toku\\CaaS\\": "src/"
