@@ -8,10 +8,9 @@
     "license": "proprietary",
     "authors": [
         {
-            "name": "Chung Chee Foong",
-            "email": "chung.cheefoong@toku.co",
-            "homepage": "https://toku.co/",
-            "role": "Solution Architect"
+            "name": "Toku Pte Ltd",
+            "email": "support@toku.co",
+            "homepage": "https://toku.co/"
         }
     ],
     "support": {
