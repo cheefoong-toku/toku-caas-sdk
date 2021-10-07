@@ -5,7 +5,8 @@
         "php": ">=7.0"
         
     },
-    "license": "proprietary",
+    "license": "MIT",
+	 "keywords": ["sdk","webhook","api","caas","toku"],
     "authors": [
         {
             "name": "Toku Pte Ltd",
