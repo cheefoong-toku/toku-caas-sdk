@@ -1,6 +1,6 @@
 ![Toku](https://cdn-bkcnk.nitrocdn.com/GUXtPIoDRfmANuZRyGQQSfLadxWYqbOq/assets/static/optimized/rev-1f548d6/wp-content/uploads/2019/08/Toku-New-High-Res-Logo-2019-Small.png)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/cheefoong-toku/toku-caas-sdk/blob/main/LICENSE)
 
 ## Documentation
 You can find the oneline document [here](https://apidocs.toku.co/).
