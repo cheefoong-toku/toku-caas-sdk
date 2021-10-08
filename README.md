@@ -1,15 +1,11 @@
 ![Toku](https://cdn-bkcnk.nitrocdn.com/GUXtPIoDRfmANuZRyGQQSfLadxWYqbOq/assets/static/optimized/rev-1f548d6/wp-content/uploads/2019/08/Toku-New-High-Res-Logo-2019-Small.png)
 [![License](https://poser.pugx.org/{package}/license)](https://packagist.org/packages/{package})
 
-[[_TOC_]]
-
-##Documentation
-=============
+## Documentation
 You can find the oneline document [here](https://apidocs.toku.co/).
 
 
-#Installation
-============
+# Installation
 You can install the SDK using composer:
 
     composer require toku/caas_sdk
@@ -69,6 +65,3 @@ $ctrl->PlayTTS("This is a test message one", "en", "f")->
 
 ?>
 ```
-
-
-
