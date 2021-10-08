@@ -3,7 +3,7 @@
     <type>org.netbeans.modules.php.project</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/php-project/1">
-            <name>caas_sdk</name>
+            <name>TokuCaas_SDK_PHP</name>
         </data>
     </configuration>
 </project>
