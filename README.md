@@ -1,16 +1,17 @@
 ![Toku](https://cdn-bkcnk.nitrocdn.com/GUXtPIoDRfmANuZRyGQQSfLadxWYqbOq/assets/static/optimized/rev-1f548d6/wp-content/uploads/2019/08/Toku-New-High-Res-Logo-2019-Small.png)
+
 [![License](https://poser.pugx.org/{package}/license)](https://packagist.org/packages/{package})
 
 ## Documentation
 You can find the oneline document [here](https://apidocs.toku.co/).
 
 
-# Installation
+## Installation
 You can install the SDK using composer:
 
     composer require toku/caas_sdk
     
-# Quick Start - Call Handle
+## Quick Start - Call Handle
 #### Autoloading
 Require/include autoloading if your PHP framework does not handle autoloading.
 
