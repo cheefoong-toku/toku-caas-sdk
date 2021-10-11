@@ -10,7 +10,10 @@ You can find the online document [here](https://apidocs.toku.co/).
 You can install the SDK using composer:
 
     composer require toku/caas_sdk
-    
+Use command below to regenerate the classes installed:
+
+	composer dump-autoload
+	
 ## Quick Start - Call Handle
 #### Autoloading
 Require/include autoloading if your PHP framework does not handle autoloading.
