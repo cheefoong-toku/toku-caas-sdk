@@ -277,15 +277,15 @@ class CallController {
 
     //! Call handle function, make outbound call
     /*!
-    \param $called_party
-    \param $calling_party
-    \param $handle_interrupt
-    \param $record_call
-    \param $record_callback_url
-    \param $record_callback_method
-    \param $record_wait_sync
-    \param $ringtone @ref RINGTONE_TYPE
-    \param $record_split
+    \param string $called_party Called party number.
+    \param string $calling_party Calling party number.
+    \param boolean $handle_interrupt Set to true if need to receive B party disconnect event, a webhook will be sent to call handle callback URL.
+    \param boolean $record_call Set to true if need to record the call conversation.
+    \param string $record_callback_url Record record callback URL.
+    \param string $record_callback_method Record callback method.
+    \param boolean $record_wait_sync Set to true if need to download the recording file uppon receive the recording callback webhook, this is to ensure the recording event to be sent only when the media file are ready to download.
+    \param string $ringtone Ringtone see @ref RINGTONE_TYPE
+    \param boolean $record_split Set to true if need to record call conversation into sperate recording file.
       \return <em>class</em> CallController object instance
      */
     public function MakeCall($called_party, $calling_party = null, $handle_interrupt = false, $record_call = false, $record_callback_url = "", $record_callback_method = "GET", $record_wait_sync = false, $ringtone = "", $record_split = false) {
@@ -309,8 +309,13 @@ class CallController {
 
     //! Call handle function, play media file from media storage (not open for public)
     /*!
+      \param string $name Storage wave file name
+      \param integer $dtmf Set number of DTMF to be capture, valid range between 0 ~ 20, set to 0 if no DTMF input needed to be captured. 
+      \param boolean $handle_interrupt Set to true if need to capture DTMF, a webhook will be send to call handle callback URL, an empty will be sent if no DTMF captured as long as this parameter set to true.
+      \param integer $replay Number of times the message will be replay, usually replay will be used if $dtmf > 0, the message will be replay if no DTMF captured. 
+      \param string $no_dtmf_value Play difference wave file if $dtmf > 0 and no DTMF captured.
       \return <em>class</em> CallController object instance
-      \sa
+      \sa PlayTTS(), PlayURL()
      */
     private function PlayFile($name, $dtmf = 0, $handle_interrupt = false, $replay = 0, $no_dtmf_value = null) {
         if ($no_dtmf_value == null)
@@ -333,7 +338,7 @@ class CallController {
       \param integer $dtmf Set number of DTMF to be capture, valid range between 0 ~ 20, set to 0 if no DTMF input needed to be captured. 
       \param boolean $handle_interrupt Set to true if need to capture DTMF, a webhook will be send to call handle callback URL, an empty will be sent if no DTMF captured as long as this parameter set to true.
       \param integer $replay Number of times the message will be replay, usually replay will be used if $dtmf > 0, the message will be replay if no DTMF captured. 
-      \param string $no_dtmf_value Play difference message if $dtmf > 0 and no DTMF captured.
+      \param string $no_dtmf_value Play difference system wave file if $dtmf > 0 and no DTMF captured.
       \return <em>class</em> CallController object instance
       \sa PlayTTS(), PlayURL()
      */
@@ -384,7 +389,7 @@ class CallController {
       \param char $voice Voice type, see @ref TTS_VOICE_TYPE.
       \param integer $dtmf Set number of DTMF to be capture, valid range between 0 ~ 20, set to 0 if no DTMF input needed to be captured.
       \param boolean $handle_interrupt Set to true if need to capture DTMF, a webhook will be send to call handle callback URL, an empty will be sent if no DTMF captured as long as this parameter set to true.
-      \param boolean $replay Number of times the message will be replay, usually replay will be used if $dtmf > 0, the message will be replay if no DTMF captured.
+      \param integer $replay Number of times the message will be replay, usually replay will be used if $dtmf > 0, the message will be replay if no DTMF captured.
       \param string $no_dtmf_message Play difference message if $dtmf > 0 and no DTMF captured.
 
       \return <em>class</em> CallController object instance
@@ -414,7 +419,7 @@ class CallController {
       \param char $voice Voice type, see @ref TTS_VOICE_TYPE.
       \param integer $dtmf Set number of DTMF to be capture, valid range between 0 ~ 20, set to 0 if no DTMF input needed to be captured.
       \param boolean $handle_interrupt Set to true if need to capture DTMF, a webhook will be send to call handle callback URL, an empty will be sent if no DTMF captured as long as this parameter set to true.
-      \param boolean $replay Number of times the message will be replay, usually replay will be used if $dtmf > 0, the message will be replay if no DTMF captured.
+      \param integer $replay Number of times the message will be replay, usually replay will be used if $dtmf > 0, the message will be replay if no DTMF captured.
       \param string $no_dtmf_message Play difference message if $dtmf > 0 and no DTMF captured.
 
       \return <em>class</em> CallController object instance
